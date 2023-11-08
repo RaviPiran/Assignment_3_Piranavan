@@ -1,0 +1,81 @@
+/* Nav Bar */
+.two{
+    padding:21%;
+}
+
+.one{
+    padding-right:350px;
+}
+
+.section{ 
+    height:5vh;
+    /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5) ; */
+
+ }
+
+ .one > li{
+     padding: 10px;
+     
+ }
+
+ .div1{
+    height: 5vh;
+ }
+
+
+ /* section2 */
+
+.button1{background-color:rgb(27, 173, 127);
+    border-radius: 5px;
+    padding-right: 50px;
+    
+    
+    
+         }
+
+.para{ padding-top:60px;
+            float: left;
+            margin-left:43%;
+}
+        
+.section1{
+    height: 50vh;
+    padding-top: 5%;
+
+}
+
+.img1{ margin-right:200px;
+
+}
+
+.img{ width:300px;
+    height: 300px;
+    margin-top: 10px;
+    margin-left: 50px;
+    }
+/* Section 3 */
+
+.section2{
+    height: 50vh;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5) ;
+
+}
+
+.img0{ width:350px;
+    height: 350px;
+    margin-top: 25px;
+    margin-left: 450px;
+    }
+
+.img2{  float: left;}
+
+.para1{
+    
+    margin-top: 50px;
+    margin-right: 450px;
+                         }
+
+
+
+
+
