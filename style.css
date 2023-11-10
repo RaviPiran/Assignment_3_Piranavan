@@ -1,3 +1,5 @@
+
+
 /* Nav Bar */
 .two{
     padding:21%;
@@ -10,6 +12,7 @@
 .section{ 
     height:5vh;
     /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5) ; */
+    
 
  }
 
@@ -27,11 +30,9 @@
 
 .button1{background-color:rgb(27, 173, 127);
     border-radius: 5px;
-    padding-right: 50px;
+    padding-right: 30px;
     
-    
-    
-         }
+    }
 
 .para{ padding-top:60px;
             float: left;
@@ -57,7 +58,7 @@
 
 .section2{
     height: 50vh;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5) ;
+    
 
 }
 
@@ -73,9 +74,60 @@
     
     margin-top: 50px;
     margin-right: 450px;
-                         }
+}
+
+/* Section4 */
 
 
+.section4{
+    text-align: center;
+    height: 800px;
+        
 
+   }
+   
+   
+   .port > li{ display: inline;
+               padding: 10px;
+            border: 1px solid black;
+        border-radius: 5px;
+    margin-left:20px ;
+margin-right: 30px;}
+   
+   .port{ 
+       padding-top: 20px;
+       }
+   
+       .grid-container {
+           display: inline-grid;
+           grid-template-columns: auto auto auto auto;
+          padding: 30px;
+         }
+   
+         .grid-item {
+           
+           padding: 40px;
+           text-align: center;
+           
+                      }
 
+        .img4{
+            height: 150px;
+            width: 150px;
+        }
+   
+        .grid-item>.img5{
+            height: 40px;
+            width: 60px;
+            }
 
+            /* section5 */
+
+        .section5{
+            height: 50vh;
+                box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5) ;
+
+        }
+         
+   
+         
