@@ -23,7 +23,7 @@ body{
 }
 
 .section{ 
-    height:5vh;
+    height:10vh;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5) ;
     
 
@@ -40,6 +40,10 @@ body{
 
 
  /* section2 */
+
+ 
+
+ 
 
 .button1{background-color:rgb(27, 173, 127);
     border-radius: 5px;
@@ -89,7 +93,12 @@ body{
     margin-right: 450px;
 }
 
-
+.img0 {
+    transform: scale(1.0);
+}
+.img0:hover {
+    transform: scale(1.2);
+}
 
 
 /* Section4 */
@@ -206,8 +215,15 @@ body{
 
      /* section7 */
 
-    .section7{
+    .section10{
         height: 50vh;
+padding-left: 20%;
+padding-right: 20%;  
+ }
+
+    .conta{
+        
+        margin-top: 25%;
     }
 
    
@@ -253,16 +269,11 @@ padding: 60px;
          footer{
             /* padding: 5px; */
             height: 5vh;
-               text-align: center; 
-    /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5) ; */
-    margin-top: 5vh;
-
-
-                      }
-            
-        
-            
-            
+            text-align: center; 
+            /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5) ; */
+            margin-top: 5vh;
+                  }
+    
         
             
             
