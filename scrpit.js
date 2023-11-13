@@ -38,5 +38,12 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-
+// map
+function initMap() {
+  var options= {
+    zoom:20,
+    center:{lat:9.704851,lng:80.069853}
+  }
+  var googlemap = new google.maps.Map(document.getElementById("map"), options);
+}
 

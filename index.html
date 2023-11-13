@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> ©Plantix</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./Assets/bootstrap/css/bootstrap.min.css">
 </head>
@@ -31,7 +31,7 @@
                 <a class="nav-link" href="#">FAQs</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="#">Contact</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"><img src="./Assets/img/moon(dark).svg" onclick="myFunction()" id="modeIcon"></a>
@@ -42,6 +42,7 @@
         </div>
       </nav>
 </section>
+
 
 <!-- Section2 -->
 
@@ -261,36 +262,97 @@
   <h2> WHAT SAY CLIENT</h2>
    <p style="font-weight: 180; ">Business clients are crucial for the success and growth of any enterprise. <br>These clients are typically other companies. </p>
   
-
-  <div class="grid-container1">
+   
+  <!-- <div class="grid-container1">
     <div class="grid-item1"><img src="./Assets/img/Screenshot from 2023-11-10 23-18-18.png" alt="smith"></div>
     <div class="grid-item1"><img src="./Assets/img/Screenshot from 2023-11-10 23-18-29.png" alt="kohli"></div>
     <div class="grid-item1"><img src="./Assets/img/Screenshot from 2023-11-10 23-18-39.png" alt="wili"></div>  
     
+    </div> -->
+    
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" >
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner" style="text-align: center;">
+        <div class="carousel-item active">
+          <div class="grid-container1">
+            <div class="grid-item1"><img src="./Assets/img/Screenshot from 2023-11-10 23-18-18.png" alt="smith"></div>
+            
+            
+            </div>
+                </div>
+        <div class="carousel-item">
+          <div class="grid-container1">
+            <div class="grid-item1"><img src="./Assets/img/Screenshot from 2023-11-10 23-18-29.png" alt="kohli"></div>
+            
+            </div>
+                </div>
+        <div class="carousel-item">
+          <div class="grid-container1">
+            <div class="grid-item1"><img src="./Assets/img/Screenshot from 2023-11-10 23-18-39.png" alt="wili"></div>  
+            
+            </div>
+                </div>
+      </div>
+     
     </div>
+
 
 </div>
 
 <!-- section7 -->
 <div class="row section10">
-<div class="col-lg-4" style="box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5) ;">
+<div class="col-lg-4" style=" background-color: rgb(124, 176, 126);">
 <div class="conta">
 <h2>Contact Info:</h2>
 <p>Fill the form and our team will get to back<br>to you within 24 hours.</p><br>
-<p><img src="./Assets/img/phone.svg" > +94768645159</p>
-<p><img src="./Assets/img/mail.svg" > leafforlife@gmail.com</p>
+<p><img src="./Assets/img/phone.svg" > +94768645159</p><br>
+<p><img src="./Assets/img/mail.svg" > leafforlife@gmail.com</p><br>
 <p><img src="./Assets/img/map-pin.svg" > 113, Bus stand view, Jaffna</p>
 
 </div>
 
 </div>
   
-<div class="col-lg-8" style="box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5) ;">
+<div class="col-lg-8" >
+  <div class="container">
+    <form action="/action_page.php">
+      
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name.." >
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
+      <label for="lname">Phone number</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your Phone num..">
+  
+      <label for="country">Email</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your Email..">
+
+  
+      <label for="subject">Message</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+    </form>
+  </div>
 
 </div>
 
 </div> 
+
+<!-- map inte -->
+<div class="row map1">
+  
+  <div id="map">
+
+  </div>
+
+</div>
 
 <!-- Footer -->
 
@@ -300,13 +362,15 @@
     <h6>Subscribe to our newsletter<br>
       to stay update</h6><br>
       <form>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Enter Email Address" aria-label="Enter Email Address" aria-describedby="basic-addon2" style="background-color: rgb(211, 243, 214);">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" style="background-color:rgb(18, 95, 40); color:white;">Subscribe</button>
-          </div>
+        <div class="inputs">
+            <div class="inputmail">
+                <input type="text" class="email" placeholder="Email Address">
+            </div>
+            <div class="inputbtn">
+                <button class="button3" type="button">Subscribe</button>
+            </div>
         </div>
-      </form>
+    </form>
     
     </div>
     <div class="grid-item3"><h5>Our Address</h5>
@@ -349,10 +413,9 @@
 
 <script src="scrpit.js"></script>
 <script src="./Assets/bootstrap/js/bootstrap.min.js"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUZ61A_lK8Em8_DQ6kSlGzX-SDBK1lEKg&callback=initMap"></script>
 </body>
 </html>
-
-
 
 
 

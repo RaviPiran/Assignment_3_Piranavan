@@ -5,7 +5,7 @@ body{
     padding: 3px;
     background-color: white;
     color: black;
-    
+
   }
   
   .dark-mode {
@@ -16,6 +16,7 @@ body{
 /* Nav Bar */
 .two{
     padding:21%;
+    /* margin-left:21%; */
 }
 
 .one{
@@ -23,8 +24,9 @@ body{
 }
 
 .section{ 
-    height:10vh;
+    height:6.5vh;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5) ;
+    
     
 
  }
@@ -151,7 +153,7 @@ body{
         .section5{
             height: 60vh;
                 padding-top: 3%;
-                background-color: rgb(161, 240, 191);
+                background-color: rgba(177, 211, 177, 0.93);
 
         }
 
@@ -170,13 +172,13 @@ body{
           }
           
           .active, .accordion:hover {
-            background-color: rgb(27, 173, 127); 
+            background-color: rgb(133, 205, 161); 
           }
           
           .panel {
             padding: 0 10px;
             display: none;
-            background-color: rgb(27, 173, 127);
+            background-color: rgb(133, 205, 161);
             overflow: hidden;
             
             
@@ -210,21 +212,62 @@ body{
       .grid-item1 {
          padding: 5px;
          text-align: center;
+         
      
                  }
 
      /* section7 */
 
     .section10{
-        height: 50vh;
-padding-left: 20%;
-padding-right: 20%;  
+        height: 70vh;
+padding-left: 5%;
+padding-right: 5%;  
  }
 
     .conta{
         
-        margin-top: 25%;
+        margin-top: 30%;
+        margin-left:20% ;
     }
+
+    * {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* section map */
+.map1{
+    height: 50vh;
+    padding-top: 60px;
+    
+}
 
    
 /* Footer */
@@ -264,6 +307,32 @@ padding: 60px;
             width: 30px;
          }
 
+
+         form .inputs {
+            display: grid;
+            grid-template-columns: auto auto;
+            height: 80px;
+            width: 310px;
+            background-color: #DBE9CA;
+            border-radius: 10px;
+        }
+        form .inputmail .email {
+            margin: 20px;
+            width: 150px;
+            color: #000;
+            height: 50px;
+            background-color: transparent;
+            border: none;
+        }
+        form .inputbtn .button3 {
+            padding: 10px;
+            margin: 20px 15px 0 0;
+            background-color: rgb(56, 116, 56);
+            border-radius: 10px;
+            color: #FFFFFF;
+            border: transparent;
+        }
+
          /* footer1 */
 
          footer{
@@ -275,6 +344,4 @@ padding: 60px;
                   }
     
         
-            
-            
-            
+                 
