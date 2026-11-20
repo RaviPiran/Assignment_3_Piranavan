@@ -1,426 +1,996 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ©Plantix</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./Assets/bootstrap/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plantix - Premium nursery, indoor & outdoor plants, botanical guidance and gardening accessories.">
+  <title>©Plantix - Modern Botanical Nursery & Plants</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./Assets/img/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="./Assets/bootstrap/css/bootstrap.min.css">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Nav bar -->
-<section class="section">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid div1">
-          <a class="navbar-brand two" href="#"><img src="./Assets/img/favicon.png" style="background-color: darkgreen;">PLANTIX</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+
+  <!-- Reading Progress Bar -->
+  <div id="scrollProgressBar" class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Ambient Floating Leaves (Background Animation) -->
+  <div class="ambient-leaves" aria-hidden="true">
+    <div class="ambient-leaf">🌿</div>
+    <div class="ambient-leaf">🍃</div>
+    <div class="ambient-leaf">🌱</div>
+    <div class="ambient-leaf">☘️</div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header-section">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <div class="brand-icon-wrapper">
+            <img src="./Assets/img/favicon.png" alt="Plantix Logo">
+          </div>
+          PLANTIX
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#products">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faqs">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reviews">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <button class="theme-toggle-btn" onclick="myFunction()" aria-label="Toggle dark mode" title="Toggle Dark/Light Mode">
+                <img src="./Assets/img/moon(dark).svg" id="modeIcon" alt="Theme Toggle Icon">
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Carousel -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="6500">
+        <div class="carousel-inner">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row align-items-center">
+              <div class="col-lg-6 hero-content reveal-on-scroll reveal-left">
+                <div class="hero-badge">
+                  <i class="bi bi-flower1"></i> 100% Organic & Naturally Grown
+                </div>
+                <h1 class="hero-title">
+                  Plants will make <br><span class="highlight-text">your life better</span>
+                </h1>
+                <p class="hero-description">
+                  Bring fresh vitality into your living space. Handpicked vibrant, air-purifying indoor and outdoor plants delivered directly from our greenhouses to your doorstep.
+                </p>
+                <div class="hero-actions">
+                  <a href="#products" class="btn-primary-green">
+                    Explore Plants <i class="bi bi-arrow-down-right"></i>
+                  </a>
+                  <a href="#about" class="btn-secondary-outline">
+                    <i class="bi bi-info-circle"></i> Learn More
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 hero-image-wrapper reveal-on-scroll reveal-right">
+                <div class="floating-card floating-card-1">
+                  <div class="floating-card-icon">
+                    <i class="bi bi-tree"></i>
+                  </div>
+                  <div class="floating-card-text">
+                    <h6>450+ Varieties</h6>
+                    <p>Rare & Exotic Plants</p>
+                  </div>
+                </div>
+
+                <img src="./Assets/img/home.png" class="hero-main-img" alt="Plantix Healthy Indoor Plant">
+
+                <div class="floating-card floating-card-2">
+                  <div class="floating-card-icon">
+                    <i class="bi bi-star-fill text-warning"></i>
+                  </div>
+                  <div class="floating-card-text">
+                    <h6>4.9 / 5.0 Rating</h6>
+                    <p>4,000+ Happy Plant Lovers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row align-items-center">
+              <div class="col-lg-6 hero-content">
+                <div class="hero-badge">
+                  <i class="bi bi-tag-fill"></i> Seasonal Special Discount
+                </div>
+                <h1 class="hero-title">
+                  Up to <span class="highlight-text">65% OFF</span> <br>New Greenhouse Arrivals
+                </h1>
+                <p class="hero-description">
+                  Pronia, with 100% natural, organic and decorative plant arrangements. Discover flourishing seasonal blooms at unbeatable garden-fresh prices.
+                </p>
+                <div class="hero-actions">
+                  <a href="#products" class="btn-primary-green">
+                    Discover Now <i class="bi bi-arrow-down-right"></i>
+                  </a>
+                  <a href="#contact" class="btn-secondary-outline">
+                    <i class="bi bi-chat-dots"></i> Free Care Advice
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 hero-image-wrapper">
+                <div class="floating-card floating-card-1">
+                  <div class="floating-card-icon">
+                    <i class="bi bi-truck"></i>
+                  </div>
+                  <div class="floating-card-text">
+                    <h6>Free Express Delivery</h6>
+                    <p>On orders above $50</p>
+                  </div>
+                </div>
+
+                <img src="./Assets/img/images-removebg-preview.png" class="hero-main-img" alt="Seasonal Flower Plant">
+
+                <div class="floating-card floating-card-2">
+                  <div class="floating-card-icon">
+                    <i class="bi bi-shield-check"></i>
+                  </div>
+                  <div class="floating-card-text">
+                    <h6>100% Money Back</h6>
+                    <p>30-Day Plant Guarantee</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel Navigation Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous Slide">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next Slide">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust & Stats Bar -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3 col-6">
+          <div class="stat-item reveal-on-scroll reveal-up delay-1">
+            <div class="stat-icon">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-number" data-target="4000" data-suffix="+">4000+</h3>
+              <p>Happy Plant Owners</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="stat-item reveal-on-scroll reveal-up delay-2">
+            <div class="stat-icon">
+              <i class="bi bi-flower2"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-number" data-target="350" data-suffix="+">350+</h3>
+              <p>Greenhouse Varieties</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="stat-item reveal-on-scroll reveal-up delay-3">
+            <div class="stat-icon">
+              <i class="bi bi-truck"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-number" data-target="99.8" data-suffix="%">99.8%</h3>
+              <p>On-Time Safe Delivery</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="stat-item reveal-on-scroll reveal-up delay-4">
+            <div class="stat-icon">
+              <i class="bi bi-award-fill"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-number" data-target="100" data-suffix="%">100%</h3>
+              <p>Guaranteed Healthy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="about-image-container reveal-on-scroll reveal-left">
+            <div class="about-image-frame">
+              <img src="./Assets/img/about.png" class="img-fluid" alt="About Plantix Team & Greenhouse">
+              <div class="about-badge">
+                <i class="bi bi-patch-check-fill"></i>
+                <div>
+                  <h6 class="mb-0 fw-bold">Botanical Excellence</h6>
+                  <small class="text-muted">Hand-inspected prior to delivery</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="about-content reveal-on-scroll reveal-right">
+            <span class="section-tag">About Plantix</span>
+            <h2 class="section-title">
+              Who we really are & <br>why you should choose us
+            </h2>
+            <p class="section-subtitle">
+              We have over 4000+ unbiased 5-star reviews. Our customers trust our organic plant care, safe temperature-controlled shipping, and continuous support after purchase.
+            </p>
+
+            <ul class="feature-checklist">
+              <li class="feature-check-item">
+                <span class="check-icon-circle">
+                  <i class="bi bi-check-lg"></i>
+                </span>
+                <span>We always deliver on time with secure protective packaging.</span>
+              </li>
+              <li class="feature-check-item">
+                <span class="check-icon-circle">
+                  <i class="bi bi-check-lg"></i>
+                </span>
+                <span>We give you personalized guides to care for your specific plants.</span>
+              </li>
+              <li class="feature-check-item">
+                <span class="check-icon-circle">
+                  <i class="bi bi-check-lg"></i>
+                </span>
+                <span>We offer free digital health check-ups and expert consultations.</span>
+              </li>
+              <li class="feature-check-item">
+                <span class="check-icon-circle">
+                  <i class="bi bi-check-lg"></i>
+                </span>
+                <span>100% money back guaranteed if your plant doesn't thrive.</span>
+              </li>
+            </ul>
+
+            <a href="#products" class="btn-link-action">
+              Shop Now <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="products-section">
+    <div class="container">
+      <div class="section-header-center reveal-on-scroll reveal-up">
+        <span class="section-tag">Curated Collection</span>
+        <h2 class="section-title">OUR PRODUCTS</h2>
+        <p class="section-subtitle">
+          Hand-picked premium plants grown with organic nutrients to purify your indoor air and elevate your lifestyle.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <ul class="filter-tabs reveal-on-scroll reveal-up">
+        <li><button class="filter-btn active" data-filter="all">All Plants</button></li>
+        <li><button class="filter-btn" data-filter="featured">Featured</button></li>
+        <li><button class="filter-btn" data-filter="bestseller">Bestseller</button></li>
+        <li><button class="filter-btn" data-filter="latest">Latest</button></li>
+      </ul>
+
+      <!-- Products Grid -->
+      <div class="products-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card reveal-on-scroll reveal-scale delay-1" data-category="featured bestseller">
+          <span class="product-badge">Featured</span>
+          <div class="product-actions">
+            <button class="action-btn action-wishlist" title="Add to Wishlist" aria-label="Wishlist">
+              <i class="bi bi-heart"></i>
+            </button>
+            <button class="action-btn" title="Quick View" aria-label="Quick View">
+              <i class="bi bi-eye"></i>
+            </button>
+          </div>
+          <div class="product-img-wrapper">
+            <img src="./Assets/img/product1.png" class="product-img" alt="American Marigold">
+          </div>
+          <h3 class="product-title">American Marigold</h3>
+          <div class="product-rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <span>(5.0)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="product-price">$23.45</span>
+            <span class="product-price-old">$29.99</span>
+          </div>
+          <button class="btn-add-cart">
+            <i class="bi bi-bag-plus"></i> Add to Cart
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 one">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">FAQs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><img src="./Assets/img/moon(dark).svg" onclick="myFunction()" id="modeIcon"></a>
-              </li>
-              </ul>
-            
-          </div>
         </div>
-      </nav>
-</section>
 
-
-<!-- Section2 -->
-
-<!-- <div class="row section1">
-<div class="col-lg-6 ">
-  <div class="para">
-  <h1 style="word-spacing: 15px; font-size: 50px;">Plants will make<br>your life better</h1>
-  <p style="font-weight: 50;">This Page Show Some Cricket Informations with<br>Cricket Experts</p>
-  <button type="button" class="button1" style="color: aliceblue;">
-    Explore <img src="./Assets/img/baseline_south_east_white_24dp.png" width="20px" height="20px" >
-    </button>
-  </div>
-</div>
-<div class="col-lg-6 ">
-<div class="img1">
-  <img src="./Assets/img/home.png" class="img" alt="Man working with computer" >
-
-</div>
-
-</div>
-</div> -->
-
-<div class="row car">
-<div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
-  <div class="carousel-inner ">
-    <div class="carousel-item active  ">
-      <div class="row section1">
-        <div class="col-lg-6 ">
-          <div class="para">
-          <h1 style="word-spacing: 15px; font-size: 50px;">Plants will make<br>your life better</h1>
-          <p style="font-weight: 50;">This Page Show Some Cricket Informations with<br>Cricket Experts</p>
-          <button type="button" class="button1" style="color: aliceblue;">
-            Explore <img src="./Assets/img/baseline_south_east_white_24dp.png" width="20px" height="20px" >
+        <!-- Product 2 -->
+        <div class="product-card reveal-on-scroll reveal-scale delay-2" data-category="featured latest">
+          <span class="product-badge sale">Sale -20%</span>
+          <div class="product-actions">
+            <button class="action-btn action-wishlist" title="Add to Wishlist" aria-label="Wishlist">
+              <i class="bi bi-heart"></i>
+            </button>
+            <button class="action-btn" title="Quick View" aria-label="Quick View">
+              <i class="bi bi-eye"></i>
             </button>
           </div>
+          <div class="product-img-wrapper">
+            <img src="./Assets/img/product2.png" class="product-img" alt="Black Eyed Susan">
+          </div>
+          <h3 class="product-title">Black Eyed Susan</h3>
+          <div class="product-rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <span>(4.8)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="product-price">$25.45</span>
+            <span class="product-price-old">$32.00</span>
+          </div>
+          <button class="btn-add-cart">
+            <i class="bi bi-bag-plus"></i> Add to Cart
+          </button>
         </div>
-        <div class="col-lg-6 ">
-        <div class="img1">
-          <img src="./Assets/img/home.png" class="img" alt="Man working with computer" >
-        
-        </div>
-        
-        </div>
-        </div>
-    </div>
-    <div class="carousel-item">
-      <div class="row section1">
-        <div class="col-lg-6 ">
-          <div class="para">
-          <h3 style="word-spacing: 15px; ">65% OFF</h3><h1>NEW PLANT</h1>
-          <p>Pronia, With 100% Natural, Organic & Plant Shop.</p>
-          <button type="button" class="button1" style="color: aliceblue;">
-            DISCOVER NOW
+
+        <!-- Product 3 -->
+        <div class="product-card reveal-on-scroll reveal-scale delay-3" data-category="bestseller">
+          <span class="product-badge">Bestseller</span>
+          <div class="product-actions">
+            <button class="action-btn action-wishlist" title="Add to Wishlist" aria-label="Wishlist">
+              <i class="bi bi-heart"></i>
+            </button>
+            <button class="action-btn" title="Quick View" aria-label="Quick View">
+              <i class="bi bi-eye"></i>
             </button>
           </div>
+          <div class="product-img-wrapper">
+            <img src="./Assets/img/product3.png" class="product-img" alt="Bleeding Heart">
+          </div>
+          <h3 class="product-title">Bleeding Heart</h3>
+          <div class="product-rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <span>(5.0)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="product-price">$30.45</span>
+            <span class="product-price-old">$38.00</span>
+          </div>
+          <button class="btn-add-cart">
+            <i class="bi bi-bag-plus"></i> Add to Cart
+          </button>
         </div>
-        <div class="col-lg-6 ">
-        <div class="img1">
-          <img src="./Assets/img/images-removebg-preview.png" class="img" alt="Man working with computer" >
-        
+
+        <!-- Product 4 -->
+        <div class="product-card reveal-on-scroll reveal-scale delay-4" data-category="latest">
+          <span class="product-badge">New</span>
+          <div class="product-actions">
+            <button class="action-btn action-wishlist" title="Add to Wishlist" aria-label="Wishlist">
+              <i class="bi bi-heart"></i>
+            </button>
+            <button class="action-btn" title="Quick View" aria-label="Quick View">
+              <i class="bi bi-eye"></i>
+            </button>
+          </div>
+          <div class="product-img-wrapper">
+            <img src="./Assets/img/product4.png" class="product-img" alt="Bloody Cranesbill">
+          </div>
+          <h3 class="product-title">Bloody Cranesbill</h3>
+          <div class="product-rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <span>(5.0)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="product-price">$45.00</span>
+            <span class="product-price-old">$55.00</span>
+          </div>
+          <button class="btn-add-cart">
+            <i class="bi bi-bag-plus"></i> Add to Cart
+          </button>
         </div>
-        
+
+        <!-- Product 5 -->
+        <div class="product-card reveal-on-scroll reveal-scale delay-1" data-category="featured">
+          <span class="product-badge">Featured</span>
+          <div class="product-actions">
+            <button class="action-btn action-wishlist" title="Add to Wishlist" aria-label="Wishlist">
+              <i class="bi bi-heart"></i>
+            </button>
+            <button class="action-btn" title="Quick View" aria-label="Quick View">
+              <i class="bi bi-eye"></i>
+            </button>
+          </div>
+          <div class="product-img-wrapper">
+            <img src="./Assets/img/product5.png" class="product-img" alt="Butterfly Weed">
+          </div>
+          <h3 class="product-title">Butterfly Weed</h3>
+          <div class="product-rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <span>(4.9)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="product-price">$50.45</span>
+            <span class="product-price-old">$62.00</span>
+          </div>
+          <button class="btn-add-cart">
+            <i class="bi bi-bag-plus"></i> Add to Cart
+          </button>
         </div>
+
+        <!-- Product 6 -->
+        <div class="product-card reveal-on-scroll reveal-scale delay-2" data-category="bestseller">
+          <span class="product-badge">Popular</span>
+          <div class="product-actions">
+            <button class="action-btn action-wishlist" title="Add to Wishlist" aria-label="Wishlist">
+              <i class="bi bi-heart"></i>
+            </button>
+            <button class="action-btn" title="Quick View" aria-label="Quick View">
+              <i class="bi bi-eye"></i>
+            </button>
+          </div>
+          <div class="product-img-wrapper">
+            <img src="./Assets/img/product6.png" class="product-img" alt="Common Yarrow">
+          </div>
+          <h3 class="product-title">Common Yarrow</h3>
+          <div class="product-rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <span>(5.0)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="product-price">$65.00</span>
+            <span class="product-price-old">$75.00</span>
+          </div>
+          <button class="btn-add-cart">
+            <i class="bi bi-bag-plus"></i> Add to Cart
+          </button>
         </div>
+
+        <!-- Product 7 -->
+        <div class="product-card reveal-on-scroll reveal-scale delay-3" data-category="latest">
+          <span class="product-badge">New</span>
+          <div class="product-actions">
+            <button class="action-btn action-wishlist" title="Add to Wishlist" aria-label="Wishlist">
+              <i class="bi bi-heart"></i>
+            </button>
+            <button class="action-btn" title="Quick View" aria-label="Quick View">
+              <i class="bi bi-eye"></i>
+            </button>
+          </div>
+          <div class="product-img-wrapper">
+            <img src="./Assets/img/product1.png" class="product-img" alt="Doublefile Viburnum">
+          </div>
+          <h3 class="product-title">Doublefile Viburnum</h3>
+          <div class="product-rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <span>(4.7)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="product-price">$67.45</span>
+            <span class="product-price-old">$80.00</span>
+          </div>
+          <button class="btn-add-cart">
+            <i class="bi bi-bag-plus"></i> Add to Cart
+          </button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card reveal-on-scroll reveal-scale delay-4" data-category="featured bestseller">
+          <span class="product-badge sale">Hot Deal</span>
+          <div class="product-actions">
+            <button class="action-btn action-wishlist" title="Add to Wishlist" aria-label="Wishlist">
+              <i class="bi bi-heart"></i>
+            </button>
+            <button class="action-btn" title="Quick View" aria-label="Quick View">
+              <i class="bi bi-eye"></i>
+            </button>
+          </div>
+          <div class="product-img-wrapper">
+            <img src="./Assets/img/product5.png" class="product-img" alt="Feather Reed Grass">
+          </div>
+          <h3 class="product-title">Feather Reed Grass</h3>
+          <div class="product-rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <span>(5.0)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="product-price">$20.00</span>
+            <span class="product-price-old">$28.00</span>
+          </div>
+          <button class="btn-add-cart">
+            <i class="bi bi-bag-plus"></i> Add to Cart
+          </button>
+        </div>
+
+      </div>
     </div>
-    
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+  </section>
+
+  <!-- Section 5: FAQs -->
+  <section id="faqs" class="faq-section">
+    <div class="container">
+      <div class="section-header-center reveal-on-scroll reveal-up">
+        <span class="section-tag">Frequently Asked Questions</span>
+        <h2 class="section-title">Some common questions we are often asked</h2>
+        <p class="section-subtitle">
+          Everything you need to know about caring for your plants, botanical adaptations, and shipping policies.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- FAQ Column 1 -->
+        <div class="col-lg-6">
+          <div class="accordion-container">
+
+            <div class="faq-card reveal-on-scroll reveal-up delay-1">
+              <button class="accordion" type="button">
+                <span>What role do roots play in the growth and sustenance of plants?</span>
+                <span class="accordion-icon"><i class="bi bi-chevron-down"></i></span>
+              </button>
+              <div class="panel">
+                <p>Roots serve multiple essential functions for plants. They anchor the plant in the soil, absorb water and minerals, and also store reserve food materials to ensure strong, resilient growth during dry spells.</p>
+              </div>
+            </div>
+
+            <div class="faq-card reveal-on-scroll reveal-up delay-2">
+              <button class="accordion" type="button">
+                <span>How do plants adapt to their environment to ensure survival?</span>
+                <span class="accordion-icon"><i class="bi bi-chevron-down"></i></span>
+              </button>
+              <div class="panel">
+                <p>Plants exhibit various adaptations, such as altering their leaf shapes, developing extensive root systems, or having waxy coatings, to survive in different environments, coping with factors like temperature, water availability, and soil type.</p>
+              </div>
+            </div>
+
+            <div class="faq-card reveal-on-scroll reveal-up delay-3">
+              <button class="accordion" type="button">
+                <span>What are the main differences between C3 and C4 plants in photosynthesis?</span>
+                <span class="accordion-icon"><i class="bi bi-chevron-down"></i></span>
+              </button>
+              <div class="panel">
+                <p>C3 plants (like wheat and rice) and C4 plants (like corn and sugarcane) differ in their carbon fixation pathways. C3 plants use the Calvin cycle exclusively, while C4 plants use an additional step before the Calvin cycle which makes them much more efficient in high temperatures.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- FAQ Column 2 -->
+        <div class="col-lg-6">
+          <div class="accordion-container">
+
+            <div class="faq-card reveal-on-scroll reveal-up delay-1">
+              <button class="accordion" type="button">
+                <span>How do plants communicate and interact with each other in their ecosystem?</span>
+                <span class="accordion-icon"><i class="bi bi-chevron-down"></i></span>
+              </button>
+              <div class="panel">
+                <p>Plants communicate through chemical signals and symbiotic interactions with other organisms. They release compounds into the air or underground fungal mycelium networks, warning neighbors against pests and regulating root spacing.</p>
+              </div>
+            </div>
+
+            <div class="faq-card reveal-on-scroll reveal-up delay-2">
+              <button class="accordion" type="button">
+                <span>What are some common plant diseases and how can they be prevented?</span>
+                <span class="accordion-icon"><i class="bi bi-chevron-down"></i></span>
+              </button>
+              <div class="panel">
+                <p>Common plant diseases include powdery mildew, root rot, and various leaf blights. Prevention involves maintaining proper plant hygiene, ensuring good air circulation, watering the roots rather than foliage, and using natural neem oil treatments.</p>
+              </div>
+            </div>
+
+            <div class="faq-card reveal-on-scroll reveal-up delay-3">
+              <button class="accordion" type="button">
+                <span>Explain the importance of pollinators in the life cycle of plants.</span>
+                <span class="accordion-icon"><i class="bi bi-chevron-down"></i></span>
+              </button>
+              <div class="panel">
+                <p>Pollinators, such as bees, butterflies, and hummingbirds, aid in the transfer of pollen between plants, facilitating cross-pollination. This process is essential for the production of healthy fruits, flowers, and seeds across ecosystems.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Testimonials Carousel -->
+  <section id="reviews" class="testimonials-section">
+    <div class="container">
+      <div class="section-header-center reveal-on-scroll reveal-up">
+        <span class="section-tag">Client Reviews</span>
+        <h2 class="section-title">WHAT OUR CLIENTS SAY</h2>
+        <p class="section-subtitle">
+          Over 4,000+ happy plant parents and interior stylists trust Plantix for lush botanicals and unmatched customer care.
+        </p>
+      </div>
+
+      <div id="clientCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#clientCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Testimonial 1"></button>
+          <button type="button" data-bs-target="#clientCarousel" data-bs-slide-to="1" aria-label="Testimonial 2"></button>
+          <button type="button" data-bs-target="#clientCarousel" data-bs-slide-to="2" aria-label="Testimonial 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+          <!-- Review 1 -->
+          <div class="carousel-item active">
+            <div class="testimonial-card reveal-on-scroll reveal-scale">
+              <div class="testimonial-quote-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+              <p class="testimonial-text">
+                "The plants arrived in immaculate condition! The packaging preserved every leaf and the soil was still perfectly moist. Plantix has completely transformed my living room into a serene green sanctuary."
+              </p>
+              <div class="testimonial-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="testimonial-author-wrapper">
+                <img src="./Assets/img/Screenshot from 2023-11-10 23-18-18.png" class="testimonial-avatar" alt="Sarah Mitchell">
+                <div class="testimonial-author-info">
+                  <h5>Sarah Mitchell</h5>
+                  <p>Interior Stylist & Verified Buyer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+              <p class="testimonial-text">
+                "Their personalized care instructions are wonderful. I used to struggle with indoor plants, but with the free follow-up advice from Plantix, my American Marigold and Bleeding Heart are flourishing brilliantly!"
+              </p>
+              <div class="testimonial-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="testimonial-author-wrapper">
+                <img src="./Assets/img/Screenshot from 2023-11-10 23-18-29.png" class="testimonial-avatar" alt="David Miller">
+                <div class="testimonial-author-info">
+                  <h5>David Miller</h5>
+                  <p>Landscape Architect</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+              <p class="testimonial-text">
+                "Fast, reliable delivery and exceptional quality. The dark mode theme on their website is so easy on the eyes too! I have ordered four times now and each plant has been robust and pest-free."
+              </p>
+              <div class="testimonial-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="testimonial-author-wrapper">
+                <img src="./Assets/img/Screenshot from 2023-11-10 23-18-39.png" class="testimonial-avatar" alt="Elena Rodriguez">
+                <div class="testimonial-author-info">
+                  <h5>Elena Rodriguez</h5>
+                  <p>Eco-Living Enthusiast</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Contact Info & Interactive Form -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+
+        <!-- Contact Info Card -->
+        <div class="col-lg-5">
+          <div class="contact-info-card reveal-on-scroll reveal-left">
+            <div>
+              <span class="badge bg-light text-success fw-bold px-3 py-2 rounded-pill mb-3">Get In Touch</span>
+              <h2>Contact Info</h2>
+              <p class="intro">
+                Have questions about plant care, wholesale nursery orders, or shipping? Fill out the form and our team will get back to you within 24 hours.
+              </p>
+
+              <div class="contact-details-list">
+                <div class="contact-detail-item">
+                  <div class="contact-icon-bubble">
+                    <img src="./Assets/img/phone.svg" alt="Phone Icon">
+                  </div>
+                  <div>
+                    <small class="text-white-50 d-block">Phone Support</small>
+                    <span>+94 76 864 5159</span>
+                  </div>
+                </div>
+
+                <div class="contact-detail-item">
+                  <div class="contact-icon-bubble">
+                    <img src="./Assets/img/mail.svg" alt="Email Icon">
+                  </div>
+                  <div>
+                    <small class="text-white-50 d-block">Email Address</small>
+                    <span>leafforlife@gmail.com</span>
+                  </div>
+                </div>
+
+                <div class="contact-detail-item">
+                  <div class="contact-icon-bubble">
+                    <img src="./Assets/img/map-pin.svg" alt="Location Icon">
+                  </div>
+                  <div>
+                    <small class="text-white-50 d-block">Greenhouse Location</small>
+                    <span>113, Bus Stand View, Jaffna</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-top border-white-50 text-white-50 small">
+              <i class="bi bi-clock me-2 text-white"></i> Mon - Sat: 8:00 AM - 6:00 PM
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+          <div class="contact-form-container reveal-on-scroll reveal-right">
+            <h3 class="fw-bold mb-3">Send Us a Message</h3>
+            <p class="text-muted mb-4">We'd love to help you find the perfect plant companion for your home.</p>
+
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6 form-group">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" class="form-control-custom" placeholder="Your first name" required>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lastname" class="form-control-custom" placeholder="Your last name" required>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="text" id="phone" name="phonenumber" class="form-control-custom" placeholder="+94 7X XXX XXXX" required>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" class="form-control-custom" placeholder="you@domain.com" required>
+                </div>
+                <div class="col-12 form-group">
+                  <label for="subject">Message</label>
+                  <textarea id="subject" name="subject" class="form-control-custom" placeholder="Tell us how we can help you..." rows="4" required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn-submit-contact">
+                    Send Message <i class="bi bi-send-fill"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <div class="container">
+      <div class="map-wrapper reveal-on-scroll reveal-scale">
+        <div id="map"></div>
+        <div class="map-placeholder-overlay" id="mapOverlay" style="display: none;">
+          <h4>Plantix Botanical Garden & Greenhouse</h4>
+          <p>113, Bus Stand View, Jaffna | Open Daily for Plant Lovers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Column 1: Brand & Newsletter -->
+        <div class="col-lg-4 col-md-6 footer-col">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="./Assets/img/favicon2.png" width="32" height="32" alt="Plantix Logo">
+            <h4 class="mb-0 fw-bold text-success font-monospace">PLANTIX</h4>
+          </div>
+          <p>
+            Subscribe to our newsletter to receive weekly plant care tips, new arrivals, and special botanical member discounts.
+          </p>
+
+          <form id="subscribeForm" class="newsletter-form" onsubmit="event.preventDefault(); validateEmail();">
+            <div class="newsletter-box">
+              <input type="text" id="emailInput" class="newsletter-input" placeholder="Enter your email address" aria-label="Email address">
+              <button class="btn-subscribe" type="button" onclick="validateEmail()">Subscribe</button>
+            </div>
+            <p id="feedbackMessage"></p>
+          </form>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 footer-col">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 mt-3">
+            <li><a href="#home" class="text-muted hover-green">Home</a></li>
+            <li><a href="#about" class="text-muted hover-green">About Us</a></li>
+            <li><a href="#products" class="text-muted hover-green">Our Products</a></li>
+            <li><a href="#faqs" class="text-muted hover-green">FAQs</a></li>
+            <li><a href="#reviews" class="text-muted hover-green">Client Reviews</a></li>
+            <li><a href="#contact" class="text-muted hover-green">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Address & Info -->
+        <div class="col-lg-3 col-md-6 footer-col">
+          <h5>Our Address</h5>
+          <p class="mt-3">
+            Old Castle Road,<br>
+            Kopay North, Kopay,<br>
+            Jaffna, Sri Lanka.
+          </p>
+          <p class="mb-2"><strong>Phone:</strong> +94 76 864 5159</p>
+          <p class="mb-0"><strong>Email:</strong> leafforlife@gmail.com</p>
+        </div>
+
+        <!-- Column 4: Payment Methods & Socials -->
+        <div class="col-lg-3 col-md-6 footer-col">
+          <h5>We Accept All Cards</h5>
+          <p class="mt-3">100% Secure encrypted payment checkout.</p>
+          <div class="payment-grid">
+            <div class="payment-card-badge" title="Visa">
+              <img src="./Assets/img/card1.png" alt="Visa Card">
+            </div>
+            <div class="payment-card-badge" title="Mastercard">
+              <img src="./Assets/img/card2.png" alt="Mastercard">
+            </div>
+            <div class="payment-card-badge" title="American Express">
+              <img src="./Assets/img/card3.png" alt="American Express">
+            </div>
+            <div class="payment-card-badge" title="Discover">
+              <img src="./Assets/img/card4.png" alt="Discover Card">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 <strong>Plantix</strong>. All Rights Reserved. Crafted with care by <b>@Piranavan</b>.
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link-btn" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-link-btn" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-link-btn" title="Twitter / X" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="social-link-btn" title="Pinterest" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-</div>
 
-
-<!-- Section3 -->
-<div class="row section2">
-<div class="col-lg-6 ">
-<div class="img2 ">
-  <img src="./Assets/img/about.png" class="img0 " alt="cricket">
-</div>
-</div>
-
-<div class="col-lg-6">
-  <div class="para1">
-    <h1 style="word-spacing: 15px; font-size: 30px;">Who we really are & <br> why choose us</h1>
-    <p style="font-weight: 50;">We have over 4000+ unbiased reviews and our<br>
-      customers trust our plant process and delivery<br>
-      service every time.
-      
-      </p>
-   
-      <p><img src="./Assets/img/tick.png" width="18px" height="18px"> We always deliver on time.</p>
-      <p><img src="./Assets/img/tick.png" width="18px" height="18px"> We give you guides to protect and care for your plants</p>
-      <p><img src="./Assets/img/tick.png" width="18px" height="18px"> We always come over for a check-up after sale.</p>
-      <p><img src="./Assets/img/tick.png" width="18px" height="18px"> 100% money back guaranteed</p>
-      
-  </div>
-  <p style="color:darkgreen">Shop Now <img src="./Assets/img/baseline_south_east_white_24dp.png" style="background-color: darkgreen;" width="13px" height="13px"></p>
-</div>
-</div>
-
-<!-- Section4 -->
-
-<section class="section4">
-  
-  
-  <h2 style="text-align: center;">OUR PRODUCTS</h2>
-  
-  
-  <ul type="none" class="port">
-    <li style="color: orange;">Featured</li>
-    <li>Bestseller</li>
-    <li>Latest</li>
-    
-  </ul>
-  
-  <div class="grid-container">
-    <div class="grid-item"><img src="./Assets/img/product1.png" alt="BCCI" class="img4">
-    <p>American Marigold</p><p style="color: rgb(14, 202, 20);">$23.45</p>
-    <img src="./Assets/img/png-transparent-5-star-guest-house-car-dealership-5-star-angle-text-apartment-thumbnail-removebg-preview.png" class="img5">
-    </div>
-    <div class="grid-item"><img src="./Assets/img/product2.png" alt="BCB" class="img4">
-      <p>Black Eyed Susan</p><p style="color: rgb(14, 202, 20);">$25.45</p>
-      <img src="./Assets/img/png-transparent-5-star-guest-house-car-dealership-5-star-angle-text-apartment-thumbnail-removebg-preview.png" class="img5">
-
-    </div>
-    <div class="grid-item"><img src="./Assets/img/product3.png" alt="SLCB" class="img4">
-      <p>Bleeding Heart</p><p style="color: rgb(14, 202, 20);">$30.45</p>
-      <img src="./Assets/img/png-transparent-5-star-guest-house-car-dealership-5-star-angle-text-apartment-thumbnail-removebg-preview.png" class="img5">
-
-    </div>  
-    <div class="grid-item"><img src="./Assets/img/product4.png" alt="NZCB" class="img4">
-      <p>Bloody Cranesbill</p><p style="color: rgb(14, 202, 20);">$45.00</p>
-      <img src="./Assets/img/png-transparent-5-star-guest-house-car-dealership-5-star-angle-text-apartment-thumbnail-removebg-preview.png" class="img5">
-
-    </div>
-    <div class="grid-item"><img src="./Assets/img/product5.png" alt="ACB" class="img4">
-      <p>Butterfly Weed </p><p style="color: rgb(14, 202, 20);">$50.45</p>
-      <img src="./Assets/img/png-transparent-5-star-guest-house-car-dealership-5-star-angle-text-apartment-thumbnail-removebg-preview.png" class="img5">
-
-    </div>
-    <div class="grid-item"><img src="./Assets/img/product6.png" alt="PCB" class="img4">
-      <p>Common Yarrow</p><p style="color: rgb(14, 202, 20);">$65.00</p>
-      <img src="./Assets/img/png-transparent-5-star-guest-house-car-dealership-5-star-angle-text-apartment-thumbnail-removebg-preview.png" class="img5">
-
-    </div>  
-    <div class="grid-item"><img src="./Assets/img/product1.png" alt="ZCB" class="img4">
-      <p>Doublefile Viburnum</p><p style="color: rgb(5, 130, 9);">$67.45</p>
-      <img src="./Assets/img/png-transparent-5-star-guest-house-car-dealership-5-star-angle-text-apartment-thumbnail-removebg-preview.png" class="img5">
-
-    </div>
-    <div class="grid-item"><img src="./Assets/img/product5.png" alt="SACB" class="img4">
-      <p>Feather Reed Grass</p><p style="color: rgb(14, 202, 20);">$20.00</p>
-      <img src="./Assets/img/png-transparent-5-star-guest-house-car-dealership-5-star-angle-text-apartment-thumbnail-removebg-preview.png" class="img5">
-
-    </div>
-    
-  </div>
-</section>
-
-<!-- section5 -->
-<div class="row section5">
-  <div class="col-lg-6 " >
-    <div class="quis">
-<h2 style="margin-bottom: 10%; word-spacing:5px;">Some common questions<br>
-  were often asked</h2>
-  
-
-  <button class="accordion">What role do roots play in the growth and sustenance of plants?</button>
-<div class="panel">
-  <p>Roots serve multiple essential functions for plants. They anchor the plant in the soil, absorb water and minerals, and also store reserve food materials.</p>
-</div>
-
-<button class="accordion">How do plants adapt to their environment to ensure survival?</button>
-<div class="panel">
-  <p>Plants exhibit various adaptations, such as altering their leaf shapes, developing extensive root systems, or having waxy coatings, to survive in different environments, coping with factors like temperature, water availability, and soil type.</p>
-</div>
-
-<button class="accordion">What are the main differences between C3 and C4 plants in terms of their photosynthetic mechanisms?</button>
-<div class="panel">
-  <p>C3 plants (like wheat and rice) and C4 plants (like corn and sugarcane) differ in their carbon fixation pathways. C3 plants use the Calvin cycle exclusively, while C4 plants use an additional step before the Calvin cycle</p>
-</div>
-    </div>
-
-</div>
-
-  <div class="col-lg-6 ">
-    <div class="ans">
-
-    <button class="accordion">How do plants communicate and interact with each other in their ecosystem?    </button>
-    <div class="panel">
-      <p>Plants communicate through chemical signals and interaction with other organisms. They release compounds into the air or soil, influencing the growth or defense of neighboring plants.</p>
-    </div>
-    
-    <button class="accordion">What are some common plant diseases and how can they be prevented or treated?</button>
-    <div class="panel">
-      <p>Common plant diseases include powdery mildew, root rot, and various blights. Prevention involves maintaining proper plant hygiene, ensuring good air circulation, and using fungicides or other treatments if necessary.</p>
-    </div>
-    
-    <button class="accordion">Explain the importance of pollinators in the life cycle of plants and the ecosystem.    </button>
-    <div class="panel">
-      <p>Pollinators, such as bees and butterflies, aid in the transfer of pollen between plants, facilitating reproduction. This process is essential for the production of fruits and seeds, contributing to biodiversity and ecosystem stability.</p>
-    </div>
-    </div>
-  </div>
-
-</div>
-
-<!-- section6 -->
-<div class="row section6">
-  
-  <h2> WHAT SAY CLIENT</h2>
-   <p style="font-weight: 180; ">Business clients are crucial for the success and growth of any enterprise. <br>These clients are typically other companies. </p>
-  
-   
-  <!-- <div class="grid-container1">
-    <div class="grid-item1"><img src="./Assets/img/Screenshot from 2023-11-10 23-18-18.png" alt="smith"></div>
-    <div class="grid-item1"><img src="./Assets/img/Screenshot from 2023-11-10 23-18-29.png" alt="kohli"></div>
-    <div class="grid-item1"><img src="./Assets/img/Screenshot from 2023-11-10 23-18-39.png" alt="wili"></div>  
-    
-    </div> -->
-    
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" >
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner" style="text-align: center;">
-        <div class="carousel-item active">
-          <div class="grid-container1">
-            <div class="grid-item1"><img src="./Assets/img/Screenshot from 2023-11-10 23-18-18.png" alt="smith"></div>
-            
-            
-            </div>
-                </div>
-        <div class="carousel-item">
-          <div class="grid-container1">
-            <div class="grid-item1"><img src="./Assets/img/Screenshot from 2023-11-10 23-18-29.png" alt="kohli"></div>
-            
-            </div>
-                </div>
-        <div class="carousel-item">
-          <div class="grid-container1">
-            <div class="grid-item1"><img src="./Assets/img/Screenshot from 2023-11-10 23-18-39.png" alt="wili"></div>  
-            
-            </div>
-                </div>
-      </div>
-     
-    </div>
-
-
-</div>
-
-<!-- section7 -->
-<div class="row section10">
-<div class="col-lg-4" style=" background-color: rgb(124, 176, 126);">
-<div class="conta">
-<h2>Contact Info:</h2>
-<p>Fill the form and our team will get to back<br>to you within 24 hours.</p><br>
-<p><img src="./Assets/img/phone.svg" > +94768645159</p><br>
-<p><img src="./Assets/img/mail.svg" > leafforlife@gmail.com</p><br>
-<p><img src="./Assets/img/map-pin.svg" > 113, Bus stand view, Jaffna</p>
-
-</div>
-
-</div>
-  
-<div class="col-lg-8" >
-  <div class="container">
-    <form action="/action_page.php">
-      
-      <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name.." >
-  
-      <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-      <label for="lname">Phone number</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your Phone num..">
-  
-      <label for="country">Email</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your Email..">
-
-  
-      <label for="subject">Message</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-  
-      <input type="submit" value="Submit">
-    </form>
-  </div>
-
-</div>
-
-</div> 
-
-<!-- map inte -->
-<div class="row map1">
-  
-  <div id="map">
-
-  </div>
-
-</div>
-
-<!-- Footer -->
-
-<section class=" section7">
-  <div class="grid-container3">
-    <div class="grid-item3"><h5><img src="./Assets/img/favicon2.png" width="25px" height="25px">PLANTIX</h5><br>
-    <h6>Subscribe to our newsletter<br>
-      to stay update</h6><br>
-      <form>
-        <div class="inputs">
-            <div class="inputmail">
-                <input type="text" class="email" placeholder="Email Address">
-            </div>
-            <div class="inputbtn">
-                <button class="button3" type="button">Subscribe</button>
-            </div>
-        </div>
-    </form>
-    
-    </div>
-    <div class="grid-item3"><h5>Our Address</h5>
-      <p style="font-weight: 50;">
-      Old Castle Road ,<br>
-      Kopay North ,<br>
-      Kopay.
-    </p>
-  </div>
-    <div class="grid-item3"><h5>Contact Us</h5>
-      
-        <p style="font-weight: 50;">+94768645159</p>
-        
-        <img src="./Assets/img/Screenshot_from_2023-11-11_18-20-23-removebg-preview.png" width="100px">
-      
-        
-      
-    </div>  
-    <div class="grid-item3">
-     <h5>We accept all <br>credit cards</h5> 
-      
-     <div class="grid-container2">
-      <div class="grid-item2"><img src="./Assets/img/card1.png" alt="smith" class="img9"></div>
-      <div class="grid-item2"><img src="./Assets/img/card2.png" alt="kohli" class="img9"></div>
-      <div class="grid-item2"><img src="./Assets/img/card3.png" alt="wili" class="img9"></div>  
-      <div class="grid-item2"><img src="./Assets/img/card4.png" alt="wili" class="img9"></div>  
-
-      
-      </div>
-  
-
-    </div>
-</section>
-
-<!-- footer1 -->
-<footer><p style="font-weight: 180;">©Copyrights & All Reserved<b> @Piranavan</b> <img  src="./Assets/img/Screenshot_from_2023-11-11_18-20-23-removebg-preview.png" width="70px">
-</p>
-</footer>
-
-
-<script src="scrpit.js"></script>
-<script src="./Assets/bootstrap/js/bootstrap.min.js"></script>
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUZ61A_lK8Em8_DQ6kSlGzX-SDBK1lEKg&callback=initMap"></script>
+  <!-- Bootstrap Bundle (with Popper) & Application Scripts -->
+  <script src="./Assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="scrpit.js"></script>
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUZ61A_lK8Em8_DQ6kSlGzX-SDBK1lEKg&callback=initMap"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
